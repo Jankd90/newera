@@ -44,3 +44,14 @@ This is a placeholder topic. Both producer.py and consumer.py are starting point
 
 For a quick start on topic creation visit:
 https://kafka.apache.org/quickstart
+
+important note!:
+
+When you use python 3.7 you will probably get some error in kafka-python. 
+you should change some things in the package:
+
+open /anaconda3/envs/[yourenvname]/lib/python3.7/site-packages/kafka/producer/base.py
+anaconda3/envs/[yourenvname]/lib/python3.7/site-packages/kafka/producer/keyed.py
+
+
+and change all async functions to async_ 
